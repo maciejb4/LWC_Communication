@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Best Game Ever" icon-name="utility:einstein">
+        <lightning-layout>
+            <lightning-layout-item padding="around-small">
+                Score: {scoreVal}
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small">
+                Timer: {timerVal}
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+    <c-child-component
+       onincrementscoreevent={handleIncrementScore}
+       is-disabled={isChildButtonDisabled} 
+    ></c-child-component>
+</template>
